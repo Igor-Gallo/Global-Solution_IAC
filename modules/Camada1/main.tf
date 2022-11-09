@@ -1,7 +1,7 @@
 
 
 #Load Balancer
-resource "aws_lb_target_group" "tg_alb_camada1" {
+resource "aws_lb_target_group" "tg_alb_application" {
   name     = "tg-alb-camada1"
   vpc_id   = "${var.vpc_id}"
   protocol = "${var.protocol}"
