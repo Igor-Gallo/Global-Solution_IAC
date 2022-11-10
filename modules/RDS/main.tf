@@ -37,9 +37,9 @@ resource "aws_db_instance" "rds_db_challenge" {
   allocated_storage       = "${var.allocated_storage}"
   max_allocated_storage   = 0
   monitoring_interval     = 0
-  name                    = "${var.rds_dbname}"
-  username                = "${var.rds_dbuser}"
-  password                = "${var.rds_dbpassword}"
+  name                    = "${var.rds_name}"
+  username                = "${var.rds_user}"
+  password                = "${var.rds_password}"
   skip_final_snapshot     = true
   db_subnet_group_name    = aws_db_subnet_group.rds_vpc_dev_sg.name
   parameter_group_name    = aws_db_parameter_group.rds_vpc_dev_parameter_group.name

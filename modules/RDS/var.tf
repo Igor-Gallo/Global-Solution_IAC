@@ -45,17 +45,17 @@ variable "allocated_storage" {
   default = 20
 }
 
-variable "rds_dbname" {
+variable "rds_name" {
   type    = string
   default = "application"
 }
 
-variable "rds_dbuser" {
+variable "rds_user" {
   type    = string
   default = "challenge"
 }
 
-variable "rds_dbpassword" {
+variable "rds_password" {
   type    = string
   default = "challenge123"
 }
