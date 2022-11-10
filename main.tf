@@ -28,8 +28,6 @@ provider "aws" {
 module "VPC" {
   source  = "./modules/VPC"
   vpc_dev_cidr = "${var.vpc_dev_cidr}"
-  vpc_sn_az1  = "${var.vpc_sn_az1}"
-  vpc_sn_az2  = "${var.vpc_sn_az2}"
   sn_vpc_dev_priv_1a_cidr = "${var.sn_vpc_dev_priv_1a_cidr}"
   sn_vpc_dev_priv_1b_cidr = "${var.sn_vpc_dev_priv_1b_cidr}"
   sn_vpc_dev_priv_2a_cidr = "${var.sn_vpc_dev_priv_2a_cidr}"
