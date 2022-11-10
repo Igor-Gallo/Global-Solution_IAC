@@ -36,8 +36,8 @@ resource "aws_lb" "elb_application2" {
 }
 
 #Ec2 template
-data "template_file" "user_data" {
-  template = "${file("./modules/Camada2/userdata.sh")}"
+data "template_file" "user_data2" {
+  template = "${file("./modules/Camada2/userdata2.sh")}"
   vars = {
       rds_endpoint = "${var.rds_endpoint}"
       rds_user     = "${var.rds_user}"
