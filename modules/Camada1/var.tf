@@ -4,11 +4,11 @@ variable "vpc_id" {}
 
 variable "rds_endpoint" {}
 
-variable "rds_dbuser" {}
+variable "rds_user" {}
 
-variable "rds_dbpassword" {}
+variable "rds_password" {}
 
-variable "rds_dbname" {}
+variable "rds_name" {}
   
 #Load Balancer
 
