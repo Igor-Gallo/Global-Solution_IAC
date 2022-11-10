@@ -35,15 +35,15 @@ resource "aws_lb" "elb_application" {
 }
 
 #Ec2 template
-data "template_file" "user_data" {
-  template = "${file("./modules/Camada1/userdata.sh")}"
-  vars = {
-      rds_endpoint = "${var.rds_endpoint}"
-      rds_user     = "${var.rds_user}"
-      rds_password = "${var.rds_password}"
-      rds_name     = "${var.rds_name}"
-  }
-}
+# data "template_file" "user_data" {
+#   template = "${file("./modules/Camada1/userdata.sh")}"
+#   vars = {
+#       rds_endpoint = "${var.rds_endpoint}"
+#       rds_user     = "${var.rds_user}"
+#       rds_password = "${var.rds_password}"
+#       rds_name     = "${var.rds_name}"
+#   }
+# }
 
 resource "aws_launch_template" "template_ASG" {
   name = "template_ASG"
