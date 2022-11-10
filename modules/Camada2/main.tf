@@ -57,7 +57,7 @@ resource "aws_launch_template" "template_ASG2" {
   tag_specifications {
     resource_type = "instance"
     tags = {
-      Name = "ws-"
+      Name = "Camada2"
     }
   }
 
@@ -67,8 +67,8 @@ resource "aws_launch_template" "template_ASG2" {
 }
 
 # Auto Scaling
-resource "aws_autoscaling_group" "asg2" {
-  name                = "asg2"
+resource "aws_autoscaling_group" "autoscaling2" {
+  name                = "AutoScalingGroup2"
   vpc_zone_identifier = ["${var.sn_vpc_dev_priv_1a_id}", "${var.sn_vpc_dev_priv_1b_id}"]
   desired_capacity    = "${var.desired_capacity}"
   min_size            = "${var.min_size}"
