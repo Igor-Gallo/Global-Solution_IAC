@@ -5,15 +5,13 @@ variable "vpc_dev_cidr" {
   default = "10.0.0.0/16"
 }
 
-variable "vpc_sn_az1" {
-    type    = string
-    default = "us-east-1a"
+# AWS Region
+variable "region_aws" {
+  description = "Região onde os recursos dentro da AWS foram criados"
+  type = string
+  default = "us-east-1"  
 }
 
-variable "vpc_sn_az2" {
-    type    = string
-    default = "us-east-1b"
-}
 
 
 
