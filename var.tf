@@ -12,7 +12,7 @@ variable "vpc_sn_az1" {
 
 variable "vpc_sn_az2" {
     type    = string
-    default = "us-east-1c"
+    default = "us-east-1b"
 }
 
 
