@@ -31,3 +31,11 @@ output "sn_vpc_dev_priv_1a_id" {
 output "sn_vpc_dev_priv_1b_id" {
   value = "${aws_subnet.sn_vpc_dev_priv_1b.id}"
 }
+
+output "sn_vpc_dev_priv_2a_id" {
+  value = "${aws_subnet.sn_vpc_dev_priv_2a.id}"
+}
+
+output "sn_vpc_dev_priv_2b_id" {
+  value = "${aws_subnet.sn_vpc_dev_priv_2b.id}"
+}

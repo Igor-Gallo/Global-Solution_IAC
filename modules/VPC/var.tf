@@ -50,3 +50,13 @@ variable "sn_vpc_dev_priv_1b_cidr" {
   description = "Declaração do ip e cidr block que a subnet priv 1B irá usar"
   default = "10.0.2.0/24"
 }
+
+variable "sn_vpc_dev_priv_2a_cidr" {
+  description = "Declaração do ip e cidr block que a subnet priv 1A irá usar"
+  default = "10.0.3.0/24"
+}
+
+variable "sn_vpc_dev_priv_2b_cidr" {
+  description = "Declaração do ip e cidr block que a subnet priv 1B irá usar"
+  default = "10.0.4.0/24"
+}

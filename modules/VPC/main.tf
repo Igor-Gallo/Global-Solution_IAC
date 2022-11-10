@@ -118,6 +118,24 @@ resource "aws_route_table_association" "association_priv_1a" {
 
 
 
+resource "aws_subnet" "sn_vpc_dev_priv_2a" {
+  vpc_id                  = aws_vpc.vpc_dev.id
+  cidr_block              = "${var.sn_vpc_dev_priv_2a_cidr}"
+  availability_zone       = "us-east-1a"
+
+  tags = {
+    "Name" = "sn_vpc_dev_priv_2a"
+  }
+}
+
+# Associação da Subnet Privada 2A
+resource "aws_route_table_association" "association_priv_2a" {
+  subnet_id      = aws_subnet.sn_vpc_dev_priv_2a.id
+  route_table_id = aws_route_table.vpc_dev_route_table_priv.id
+}
+
+
+
 
 
 # Criação da Subnet Privada US-EAST-1B
@@ -135,6 +153,23 @@ resource "aws_subnet" "sn_vpc_dev_priv_1b" {
 # Associação da Subnet Privada 1B
 resource "aws_route_table_association" "association_priv_1b" {
   subnet_id      = aws_subnet.sn_vpc_dev_priv_1b.id
+  route_table_id = aws_route_table.vpc_dev_route_table_priv.id
+}
+
+
+resource "aws_subnet" "sn_vpc_dev_priv_2b" {
+  vpc_id                  = aws_vpc.vpc_dev.id
+  cidr_block              = "${var.sn_vpc_dev_priv_2b_cidr}"
+  availability_zone       = "us-east-1b"
+
+  tags = {
+    "Name" = "sn_vpc_dev_priv_2b"
+  }
+}
+
+# Associação da Subnet Privada 1B
+resource "aws_route_table_association" "association_priv_2b" {
+  subnet_id      = aws_subnet.sn_vpc_dev_priv_2b.id
   route_table_id = aws_route_table.vpc_dev_route_table_priv.id
 }
 
