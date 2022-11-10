@@ -51,7 +51,6 @@ resource "aws_launch_template" "template_ASG" {
   instance_type          = "${var.instance_type}"
   vpc_security_group_ids = ["${var.vpc_dev_security_group_pub_id}"]
   key_name               = "${var.ssh_key}"
-  user_data              = "${base64encode(data.template_file.user_data.rendered)}"
 
   tag_specifications {
     resource_type = "instance"
