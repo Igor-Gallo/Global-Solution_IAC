@@ -43,7 +43,7 @@ module "VPC" {
 module "Camada1" {
   source  = "./modules/Camada1"
   vpc_id = "${module.VPC.vpc_dev_id}"
-    rds_endpoint = "${module.RDS.rds_endpoint}"
+  rds_endpoint = "${module.RDS.rds_endpoint}"
   rds_name = "${var.rds_name}"
   rds_user = "${var.rds_user}"
   rds_password = "${var.rds_password}"
@@ -54,10 +54,10 @@ module "Camada1" {
 
 
 
-module "RDS" {
-  source  = "./Modules/RDS"
-  sn_vpc_dev_pub_1a_id = "${module.VPC.sn_vpc_dev_pub_1a_id}"
-  sn_vpc_dev_pub_1b_id = "${module.VPC.sn_vpc_dev_pub_1b_id}"
-  vpc_dev_security_group_priv_id = "${module.VPC.vpc_dev_security_group_priv_id}"
+#module "RDS" {
+  #source  = "./Modules/RDS"
+ # sn_vpc_dev_pub_1a_id = "${module.VPC.sn_vpc_dev_pub_1a_id}"
+  #sn_vpc_dev_pub_1b_id = "${module.VPC.sn_vpc_dev_pub_1b_id}"
+  #vpc_dev_security_group_priv_id = "${module.VPC.vpc_dev_security_group_priv_id}"
 
-}
+#}
