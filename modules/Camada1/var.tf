@@ -2,6 +2,8 @@
 
 variable "vpc_id" {}
 
+variable "rds_endpoint" {}
+  
 #Load Balancer
 
 variable "protocol" {

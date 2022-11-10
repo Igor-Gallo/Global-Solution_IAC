@@ -47,17 +47,17 @@ variable "sn_vpc_dev_priv_2b_cidr" {
     default = "10.0.4.0/24"
 }
 
-variable "rds_name" {
+variable "rds_dbname" {
   type    = string
   default = "application"
 }
 
-variable "rds_user" {
+variable "rds_dbuser" {
   type    = string
   default = "challenge"
 }
 
-variable "rds_password" {
+variable "rds_dbpassword" {
   type    = string
   default = "challenge123"
 }
