@@ -20,7 +20,7 @@ variable "port" {
   default = 80
 }
 
-variable "sn_vpc_dev_pub_1a_id" {}
+variable "sn_vpc_dev_priv_1a_id" {}
 
 variable "sn_vpc_dev_priv_1b_id" {}
 
